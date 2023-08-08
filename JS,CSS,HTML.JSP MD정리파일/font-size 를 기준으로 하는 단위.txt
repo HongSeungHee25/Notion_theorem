@@ -1,0 +1,29 @@
+[모든 단위는 px로 바꿔야 실제 크기를 알수 있습니다.]
+* font-size 를 기준으로 하는 단위
+em : 부모 요소에 상대적인 단위. 
+rem : 최상위 요소 html 태그에 상대적인 단위. 
+예시 : span 태그의 폰트 크기를 정하려고 합니다. span 태그의 높이를 정하려고 합니다.
+html 의 폰트 크기가 16px 이고, 부모 요소의 폰트 크기가 20px 이라면
+1em = 20px
+1rem = 16px
+┗> r 은 root, 최상위 요소
+
+font-size : 1.2em; 또는 font-size : 1.2rem;
+height 또는 width 에도 em 또는 rem 사용 가능.
+
+* 브라우저의 viewport 크기를 기준으로 하는 상대 단위
+	┗> viewport 는 브라우저에서 문서가 표시되는 부분
+	┗> 이것은 너비와 높이가 다르므로 2개의 단위가 있다.
+vw : 너비 기준. 1vw 는 viewport 너비의 100분의 1
+vh : 높이 기준. 1vh 는 viewport 높이의 100분의 1
+vmin : vw, vh 중 작은 값을 단위로 함. 100vmin 은 viewport 의 너비, 높이 중 작은 값과 같은 크기.
+vmax : vw, vh 중 큰 값을 단위로 함. 100vmax 는 viewport 의 너비, 높이 중 큰 값과 같은 크기.
+
+% : 부모 요소를 기준으로 비율을 나타내는 단위이다.
+
+예시 : viewport 의 크기가 너비 1000px, 높이 600px 이라면?
+1vw = 10px
+1vh = 6px
+1vmin = 6px
+1vmax = 10px
+1% = 답을 알수 없음.(부모 요소의 크기를 모름)
