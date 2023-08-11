@@ -42,12 +42,12 @@
         <jsp:include page="8bottom.jsp" />
 
 # jsp:forward
-: 이 액션은 현재 요청을 다른 JSP나 서블릿으로 전달합니다. 현재 페이지의 처리를 중단하고 지정된 JSP나 서블릿으로 제어를 넘깁니다. 브라우저의 URL은 변경되지 않으며, 전달된 페이지의 결과가 원래 요청에 반환됩니다.
+: 이 액션은 현재 요청을 다른 JSP나 서블릿으로 request 객체를 전달하고 다른 JSP나 서블릿에서 전달 받습니다. 브라우저의 URL은 변경되지 않으며, 전달된 페이지의 결과가 원래 요청에 반환됩니다.
 
     ex) <jsp:forward page="anotherPage.jsp"/>
 
 # jsp:param
-: 이 액션은 < jsp:include > 또는 < jsp:forward >와 함께 파라미터(이름-값 쌍)를 전달하는 데 사용됩니다. 목적 페이지나 리소스로 추가 데이터를 전달하는 데에 사용됩니다.
+: 이 액션은 < jsp:include > 또는 < jsp:forward >와 함께 파라미터(이름-값 쌍)를 전달하는 데 사용됩니다. 목적 페이지나 리소스로 추가 데이터를 전달하는 데에 사용됩니다.(forward액션태그는 페이지 이동시 현재 request영역에 담긴 값들을 다음 페이지로 넘겨줄 수 있다.또한, include액션태그에서 사용하였던 jsp:param태그를 이용해 똑같이 request영역에 새로운 값을 담아 전달시키는것도 가능하다.)
 
     ex) <jsp:include page="7top.jsp">
 	        <jsp:param value="kim" name="username"/>
