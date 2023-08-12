@@ -37,12 +37,14 @@
 
 # jsp:include
 : 이 액션은 다른 JSP나 정적 리소스(HTML, 텍스트 등)의 내용을 현재 JSP 페이지에 포함시킵니다. 지정된 JSP나 리소스의 결과가 현재 위치에 포함되어 출력됩니다. 포함시킬 리소스는 상대 경로나 절대 경로를 사용할 수 있습니다.
+![Alt text](image-2.png)
 
     ex) <jsp:include page="7top.jsp">
         <jsp:include page="8bottom.jsp" />
 
 # jsp:forward
 : 이 액션은 현재 요청을 다른 JSP나 서블릿으로 request 객체를 전달하고 다른 JSP나 서블릿에서 전달 받습니다. 브라우저의 URL은 변경되지 않으며, 전달된 페이지의 결과가 원래 요청에 반환됩니다.(forward액션태그는 페이지 이동시 현재 request영역에 담긴 값들을 다음 페이지로 넘겨줄 수 있다.또한, include액션태그에서 사용하였던 jsp:param태그를 이용해 똑같이 request영역에 새로운 값을 담아 전달시키는것도 가능하다.)
+![Alt text](image-3.png)
 
     ex) <jsp:forward page="anotherPage.jsp"/>
 
